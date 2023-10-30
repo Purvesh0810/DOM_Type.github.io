@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <!-- <div class="box">0</div>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div> -->
+
+    <script>
+        // 1] By Id
+
+        //   document.getElementById('result').innerHTML=("Hello From Id");
+
+        // 2] By Class
+
+        // document.getElementsByClassName('box')[2].innerHTML=("Hello From Class");
+
+        // 3] By Tag Name
+
+        // document.getElementsByTagName('div')[2].innerHTML=("Hello From TagName");
+
+        // 4] By Query Selector
+
+        // document.querySelector(''.box').innerHTML=("Hello From QuerySelector");
+
+        // 2] By Query Selector All
+
+        /* var box = document.querySelectorAll(''.box')
+         box.forEach((element) => {
+            element.innerHTML="Hello From Query Sector All"
+         }) */
+
+         // Element Text Creator
+
+         var element = document.createElement('h1'); //<h1></h1>
+         var text = document.createTextNode('Hello From Element Creator'); //Hello From Element Creator
+         element.appendChild(text) //<h1>Hello From Elemt Creator</h1>
+
+         document.querySelector('#result').appendChild(element);
+
+         // Element Image Creator
+
+         var element1 = document.createElement('img');
+         var element2 = document.createElement('img');
+
+         element1.src="./instagram.jpg"
+         element1.alt="instagram logo"
+         element1.height="200"
+         element1.width="200"
+
+         element2.src="./whatsapp.jpg"
+         element2.alt="whatsapp logo"
+         element2.height="200"
+         element2.width="200"
+
+         console.log(element1);
+         console.log(element2);
+
+         document.querySelector('#result').appendChild(element1);
+         document.querySelector('#result').appendChild(element2);
+
+    </script>
+
+</body>
+
+</html>
